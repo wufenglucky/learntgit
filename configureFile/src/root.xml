@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config acNum="2">
+        <policy name="p2_1" desc="2 AC Learning Policy">
+            <ac name="AC1" startTemp="24" shutdownTemp="27" settingTemp=""/>
+            <ac name="AC2" startTemp="" shutdownTemp="" settingTemp=""/>
+        </policy>
+        <policy name="p2_2" desc="2 AC Learning Policy">
+            <ac name="AC1" startTemp="" shutdownTemp="" settingTemp=""/>
+            <ac name="AC2" startTemp="" shutdownTemp="" settingTemp=""/>
+        </policy>
+    </config>
+</root>
