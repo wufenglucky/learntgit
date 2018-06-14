@@ -1,5 +1,7 @@
 package handler;
-
+/*
+ * SAX 方式解析 XML文件
+ */
 import java.util.ArrayList;
 
 import org.xml.sax.Attributes;
@@ -74,6 +76,7 @@ public class ResolveFile extends DefaultHandler{
 					 nodePolicy.setDesc(attributes.getValue(i));
 				}
 			 }
+			 nodeConfig.policy.add(nodePolicy);
 		}else if (qName.equals("ac")) {
 			nodeAc = new NodeAc();
 			 int configNum = attributes.getLength();
@@ -90,6 +93,7 @@ public class ResolveFile extends DefaultHandler{
 					nodeAc.setSettingTemp(attributes.getValue(i));
 				}
 			 }
+			 nodePolicy.ac.add(nodeAc);
 		}
 	 }
 	 /*
@@ -101,8 +105,8 @@ public class ResolveFile extends DefaultHandler{
 			 nodeConfigList.add(nodeConfig);
 			 nodeConfig = null;
 		 }else if (qName.equals("policy")) {
-			nodePolicyList.add(nodePolicy);
-			nodePolicy = null;
+			 nodePolicyList.add(nodePolicy);
+			 nodePolicy = null;
 		}else if (qName.equals("ac")) {
 			nodeAcList.add(nodeAc);
 			nodeAc = null;
@@ -117,12 +121,6 @@ public class ResolveFile extends DefaultHandler{
 	 public void characters(char[] ch, int start, int length)throws SAXException {
 		 super.characters(ch, start, length);
 		 value = new String(ch, start, length);
-//		 System.out.println(value);
-//		 if(!value.trim().equals("")){
-//			 System.out.println("节点值是：" + value);
-//		 }
 	 }
-	 
-	 
-	 
+	
 }

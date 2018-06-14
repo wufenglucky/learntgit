@@ -1,16 +1,12 @@
 package entity;
 
+import java.util.ArrayList;
+
 public class NodePolicy {
 	private String name;//策略名
 	private String desc;//策略描述
-//	private NodeAc ac;//AC的配置
-//	
-//	public NodeAc getAc() {
-//		return ac;
-//	}
-//	public void setAc(NodeAc ac) {
-//		this.ac = ac;
-//	}
+	public ArrayList<NodeAc> ac = new ArrayList<NodeAc>();//AC配置的数组,用于存储当前policy下的AC配置
+	
 	public String getName() {
 		return name;
 	}

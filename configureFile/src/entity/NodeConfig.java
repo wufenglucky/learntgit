@@ -1,16 +1,10 @@
 package entity;
 
+import java.util.ArrayList;
+
 public class NodeConfig {
 	private String acNum;//AC配置的数量
-//	private NodePolicy policy;//策略
-//
-//	public NodePolicy getPolicy() {
-//		return policy;
-//	}
-//
-//	public void setPolicy(NodePolicy policy) {
-//		this.policy = policy;
-//	}
+	public ArrayList<NodePolicy> policy = new ArrayList<NodePolicy>();//策略的数组，用于存储当前config的policy
 
 	public String getAcNum() {
 		return acNum;

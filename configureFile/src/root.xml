@@ -10,4 +10,10 @@
             <ac name="AC2" startTemp="" shutdownTemp="" settingTemp=""/>
         </policy>
     </config>
+    <config acNum="1">
+        <policy name="p_1" desc="2 AC Learning Policy">
+            <ac name="AC1" startTemp="27" shutdownTemp="30" settingTemp="24"/>
+            <ac name="AC2" startTemp="17" shutdownTemp="24" settingTemp="20"/>
+        </policy>
+    </config>
 </root>
